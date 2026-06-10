@@ -19,17 +19,17 @@
   *{box-sizing:border-box;}
   body{
     margin:0;background:#fff;color:var(--ink);
-    font-family:var(--serif);font-size:1.12rem;line-height:1.66;font-weight:400;
+    font-family:var(--serif);font-size:1.12rem;line-height:1.5;font-weight:400;
     -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
   }
   .masthead{background:var(--accent);color:#fff;}
-  .masthead-in{max-width:46rem;margin:0 auto;padding:clamp(2.6rem,6vw,3.8rem) 1.5rem clamp(1.8rem,4vw,2.4rem);}
+  .masthead-in{max-width:92rem;margin:0 ;padding:clamp(2.6rem,6vw,3.8rem) 1.5rem clamp(1.8rem,4vw,2.4rem);}
   .masthead h1{color:#fff;}
   .masthead .lede{color:rgba(255,255,255,.82);margin-bottom:1.1rem;}
   .masthead .topnav{margin:0;}
   .masthead .topnav a{color:#fff;text-decoration-color:rgba(255,255,255,.45);}
   .masthead .topnav a:hover{text-decoration-color:#fff;}
-  .wrap{max-width:46rem;margin:0 auto;padding:clamp(2.4rem,5vw,3.2rem) 1.5rem 5rem;}
+  .wrap{max-width:92rem;margin:0 ;padding:clamp(1.8rem,4vw,3.2rem) 1.5rem 5rem;}
   a{color:var(--accent);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px;text-decoration-color:color-mix(in srgb,var(--accent) 30%,transparent);}
   a:hover{text-decoration-color:var(--accent);}
   :focus-visible{outline:2px solid var(--ink);outline-offset:3px;}
@@ -40,23 +40,26 @@
   .topnav a{margin-right:1.4rem;color:var(--accent);text-decoration-color:transparent;}
   .topnav a:hover{text-decoration-color:var(--accent);}
 
-  .label{font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin:2.8rem 0 1rem;font-weight:600;scroll-margin-top:1.5rem;}
+  .label{font-size:.95rem;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);margin:2.2rem 0 1rem;font-weight:600;scroll-margin-top:1.5rem; border-top:1px solid #D8D8D8;
+padding-top:1.7rem;}
 
-  p{margin:0 0 1.15rem;}
-  ul.bio{margin:0 0 1.15rem;padding-left:1.2rem;}
+  p{margin:0 0 0.9rem;}
+  ul.bio{margin:0 0 1.15rem;padding-left:3.2rem;}
   ul.bio li{margin:0 0 .4rem;}
   .collab{margin-top:1.4rem;}
 
   .pub{margin:0 0 1.25rem;}
   .pub .t{display:block;}
   .pub .m{color:var(--soft);font-size:.98rem;}
-  .sub{font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);margin:1.8rem 0 .8rem;}
+  .sub{font-size:1.1rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);margin:1.8rem 0 .8rem;}
   .sub:first-of-type{margin-top:0;}
   .note{color:var(--soft);font-size:1rem;margin-top:1.6rem;}
 
   .soft{margin:0 0 1rem;}
   .soft .t{font-weight:600;}
   .soft .d{color:var(--soft);}
+  
+  .accent{color:var(--accent); font-weight:600;}
 
   .links p{margin:.2rem 0;color:var(--soft);}
   footer{margin-top:4rem;color:var(--faint);font-size:.9rem;}
@@ -66,31 +69,28 @@
 <header class="masthead">
   <div class="masthead-in">
     <h1>Erin Craig</h1>
-    <p class="lede">Assistant Professor of Biostatistics, University of Michigan.</p>
-    <nav class="topnav"><a href="#publications">Publications</a><a href="#software">Software</a><a href="Craig_CV_2526.pdf">CV</a></nav>
+    <p class="lede">Assistant Professor of Biostatistics, University of Michigan</p>
+    <nav class="topnav"><a href="#publications">Publications</a><a href="#software">Software</a><a href="#contact">Contact</a><a href="Craig_CV_2526.pdf">CV</a></nav>
   </div>
 </header>
 <main class="wrap">
 
-  <p>I am an assistant professor at <a href="https://sph.umich.edu/biostat/">University of Michigan&rsquo;s Department of Biostatistics</a>.</p>
-
-  <p>My work focuses on improving healthcare through:</p>
+  <p>I am an assistant professor at <a href="https://sph.umich.edu/biostat/">University of Michigan&rsquo;s Department of Biostatistics</a>. My work focuses on improving healthcare through:</p>
   <ul class="bio">
     <li>developing statistical methods with emphasis on predictive modeling and interpretability (often inspired by and leveraging advances in AI)</li>
     <li>creating well-documented, user-friendly software, and</li>
     <li>teaching statistics for biomedical applications in a friendly, accessible way.</li>
   </ul>
-  <p>My research applications are most often in cancer and immunology, but I am generally driven to solve problems that will help people.</p>
+  <p>My research applications are most often in <span class="accent">cancer</span> and <span class="accent">immunology</span>, but I am generally driven to solve problems that will help people.</p>
 
   <p>I earned a PhD in Biomedical Data Science from <a href="https://dbds.stanford.edu/">Stanford</a>, where I was advised by <a href="https://statweb.stanford.edu/~tibs/">Rob Tibshirani</a>. I also hold a BA in Mathematics and an MS in Data Science from <a href="https://www.ncf.edu">New College of Florida</a>, where I was advised by <a href="https://www.ncf.edu/directory/patrick-t-mcdonald/">Pat McDonald</a> and Gary Kalmanovich.</p>
 
   <p>Before my PhD, I led the math content team at <a href="https://www.wolframalpha.com">Wolfram|Alpha</a>. Notably, we developed <a href="https://www.wolframalpha.com/examples/StepByStepSolutions.html">Step-by-step Solutions</a> and <a href="http://www.wolframalpha.com/problem-generator/">the Wolfram Problem Generator</a>.</p>
 
-  <p class="collab">Want to collaborate? Please reach out at <a href="mailto:ercr@umich.edu">ercr@umich.edu</a>!</p>
+  <p class="collab">Want to collaborate? Please reach out at <a href="mailto:ercr@umich.edu">ercr@umich.edu</a>.</p>
 
   <p class="label" id="publications">Selected publications</p>
 
-  <p class="sub">Published</p>
   <p class="pub"><span class="t">Craig, Pilanci, Le Menestrel, Narasimhan, Rivas, Gullaksen, Dehghannasiri, Salzman, Taylor, Tibshirani. Pretraining and the lasso.</span><span class="m"> <em>Journal of the Royal Statistical Society, Series B</em>, 2026. <a href="https://doi.org/10.1093/jrssb.qkaf050">doi</a></span></p>
   <p class="pub"><span class="t">Zaslavsky, Craig, et al. Disease diagnostics using machine learning of B cell and T cell receptor sequences.</span><span class="m"> <em>Science</em>, 387(6736), 2025. <a href="https://doi.org/10.1126/science.adp2407">doi</a></span></p>
   <p class="pub"><span class="t">Craig, Keyes, et al. Annotation-free discovery of disease-relevant cells in single-cell datasets.</span><span class="m"> <em>Science Advances</em>, 11(35), 2025. <a href="https://doi.org/10.1126/sciadv.adv5019">doi</a></span></p>
@@ -105,7 +105,7 @@
   <p class="soft"><span class="t"><a href="https://github.com/erincr">MMIL</a>.</span> <span class="d">Mixture models for multiple-instance learning: find disease-relevant cells from patient-level labels.</span></p>
   <p class="soft"><span class="t"><a href="https://github.com/erincr/sweetspot">sweetspot</a>.</span> <span class="d">Find and assess treatment-effect sweet spots in clinical trials.</span></p>
 
-  <p class="label">Contact</p>
+  <p class="label" id="contact">Contact</p>
   <div class="links">
     <p><a href="mailto:ercr@umich.edu">ercr@umich.edu</a></p>
     <p><a href="https://github.com/erincr">github.com/erincr</a></p>
