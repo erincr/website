@@ -19,16 +19,15 @@
   *{box-sizing:border-box;}
   body{
     margin:0;background:#fff;color:var(--ink);
-    font-family:var(--serif);font-size:1.12rem;line-height:1.5;font-weight:400;
+    font-family:var(--serif);font-size:1.12rem;line-height:1.6;font-weight:400;
     -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
   }
-  .masthead{background:var(--accent);color:#fff;}
+  .masthead{background:#fff;color:var(--ink);border-bottom:1px solid #E4E4E4;}
+  .masthead h1{color:var(--ink);}
+  .masthead .lede{color:var(--soft);}
+  .masthead .topnav a{color:var(--accent);text-decoration-color:transparent;}
   .masthead-in{max-width:46rem;margin:0 auto;padding:clamp(2.6rem,6vw,3.8rem) 1.5rem clamp(1.8rem,4vw,2.4rem);}
-  .masthead h1{color:#fff;}
-  .masthead .lede{color:rgba(255,255,255,.82);margin-bottom:1.1rem;}
   .masthead .topnav{margin:0 auto;}
-  .masthead .topnav a{color:#fff;text-decoration-color:rgba(255,255,255,.45);}
-  .masthead .topnav a:hover{text-decoration-color:#fff;}
   .wrap{max-width:46rem;margin:0 auto;padding:clamp(1.8rem,4vw,3.2rem) 1.5rem 5rem;}
   a{color:var(--accent);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px;text-decoration-color:color-mix(in srgb,var(--accent) 30%,transparent);}
   a:hover{text-decoration-color:var(--accent);}
@@ -36,6 +35,8 @@
 
   h1{font-weight:600;font-size:clamp(2.2rem,6vw,2.8rem);letter-spacing:-.01em;line-height:1.05;margin:0 0 .5rem;}
   .lede{font-size:1.18rem;color:var(--soft);margin:0 0 1.3rem;line-height:1.5;}
+  .lede{ color: var(--soft); }        /* title line stays muted */
+  .focus{ color: var(--ink); font-weight: 500; }   /* focus line: darker, slight weight */
   .topnav{margin:0 0 2.8rem;font-size:1.02rem;}
   .topnav a{margin-right:1.4rem;color:var(--accent);text-decoration-color:transparent;}
   .topnav a:hover{text-decoration-color:var(--accent);}
@@ -59,6 +60,8 @@ padding-top:1.7rem;}
   .soft .t{font-weight:600;}
   .soft .d{color:var(--soft);}
   
+  .me{font-weight:600;}
+  
   .accent{color:var(--accent); font-weight:600;}
 
   .links p{margin:.2rem 0;color:var(--soft);}
@@ -80,19 +83,20 @@ padding-top:1.7rem;}
 <header class="masthead">
   <div class="masthead-in">
     <h1>Erin Craig</h1>
-    <p class="lede">Assistant Professor of Biostatistics, University of Michigan</p>
+    <p class="lede"><span class="focus">Interpretable prediction methods for cancer and immunology</span><br>
+    Assistant Professor of Biostatistics, University of Michigan</p>
     <nav class="topnav"><a href="#publications">Publications</a><a href="#software">Software</a><a href="#contact">Contact</a><a href="Craig_CV.pdf">CV</a></nav>
   </div>
 </header>
 <main class="wrap">
 
-  <p>I am an assistant professor at <a href="https://sph.umich.edu/biostat/">University of Michigan&rsquo;s Department of Biostatistics</a>, working in <span class="accent">cancer</span>, <span class="accent">immunology</span>, and their <span class="accent">intersection (e.g. CAR-T therapy)</span>, but I am generally driven to solve problems that will help people.</p>
+  <p>I am an assistant professor at <a href="https://sph.umich.edu/biostat/">University of Michigan&rsquo;s Department of Biostatistics</a>, working in cancer, immunology, and their intersection (e.g. CAR-T therapy), but I am generally driven to solve problems that will help people.</p>
   
   <p>My work focuses on improving healthcare through:</p>
   <ul class="bio">
-    <li>developing <span class="accent">predictive methods</span> with emphasis on interpretability (often inspired by and leveraging advances in AI)</li>
-    <li>creating well-documented, user-friendly <span class="accent">software</span>, and</li>
-    <li><span class="accent">teaching statistics</span> for biomedical applications in a friendly, accessible way.</li>
+    <li>developing predictive methods with emphasis on interpretability (often inspired by and leveraging advances in AI),</li>
+    <li>creating well-documented, user-friendly software, and</li>
+    <li>teaching statistics for biomedical applications in a friendly, accessible way.</li>
   </ul>
 
   <p>I earned a PhD in Biomedical Data Science from <a href="https://dbds.stanford.edu/">Stanford</a>, where I was advised by <a href="https://tibshirani.su.domains/">Rob Tibshirani</a>. I also hold a BA in Mathematics and an MS in Data Science from <a href="https://www.ncf.edu">New College of Florida</a>, where I was advised by <a href="https://www.ncf.edu/directory/patrick-t-mcdonald/">Pat McDonald</a> and Gary Kalmanovich.</p>
@@ -103,10 +107,10 @@ padding-top:1.7rem;}
 
   <p class="label" id="publications">Selected publications</p>
 
-  <p class="pub"><span class="t">Craig, Pilanci, Le Menestrel, Narasimhan, Rivas, Gullaksen, Dehghannasiri, Salzman, Taylor, Tibshirani. Pretraining and the lasso.</span><span class="m"> <em>Journal of the Royal Statistical Society, Series B</em>, 2026. <a href="https://doi.org/10.1093/jrsssb/qkaf050">doi</a></span></p>
-  <p class="pub"><span class="t">Zaslavsky, Craig, et al. Disease diagnostics using machine learning of B cell and T cell receptor sequences.</span><span class="m"> <em>Science</em>, 387(6736), 2025. <a href="https://doi.org/10.1126/science.adp2407">doi</a></span></p>
-  <p class="pub"><span class="t">Craig, Keyes, et al. Annotation-free discovery of disease-relevant cells in single-cell datasets.</span><span class="m"> <em>Science Advances</em>, 11(35), 2025. <a href="https://doi.org/10.1126/sciadv.adv5019">doi</a></span></p>
-  <p class="pub"><span class="t">Hamilton, Craig, et al. CAR19 monitoring by peripheral blood immunophenotyping reveals histology-specific expansion and toxicity.</span><span class="m"> <em>Blood Advances</em>, 8(12), 2024. <a href="https://doi.org/10.1182/bloodadvances.2024012637">doi</a></span></p>
+  <p class="pub"><span class="t"><span class="me">Craig</span>, Pilanci, Le Menestrel, Narasimhan, Rivas, Gullaksen, Dehghannasiri, Salzman, Taylor, Tibshirani. Pretraining and the lasso.</span><span class="m"> <em>Journal of the Royal Statistical Society, Series B</em>, 2026. <a href="https://doi.org/10.1093/jrsssb/qkaf050">doi</a></span></p>
+  <p class="pub"><span class="t">Zaslavsky, <span class="me">Craig</span>, et al. Disease diagnostics using machine learning of B cell and T cell receptor sequences.</span><span class="m"> <em>Science</em>, 387(6736), 2025. Co-first author. <a href="https://doi.org/10.1126/science.adp2407">doi</a></span></p>
+  <p class="pub"><span class="t"><span class="me">Craig</span>, Keyes, et al. Annotation-free discovery of disease-relevant cells in single-cell datasets.</span><span class="m"> <em>Science Advances</em>, 11(35), 2025. <a href="https://doi.org/10.1126/sciadv.adv5019">doi</a></span></p>
+  <p class="pub"><span class="t">Hamilton, <span class="me">Craig</span>, et al. CAR19 monitoring by peripheral blood immunophenotyping reveals histology-specific expansion and toxicity.</span><span class="m"> <em>Blood Advances</em>, 8(12), 2024. <a href="https://doi.org/10.1182/bloodadvances.2024012637">doi</a></span></p>
 
   <p class="note">Full list of publications, talks, and grants in my <a href="Craig_CV.pdf">CV</a> and on <a href="https://scholar.google.com/citations?user=BU9CFh8AAAAJ&hl=en">Google Scholar</a>.</p>
 
